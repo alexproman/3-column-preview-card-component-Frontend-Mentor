@@ -1,0 +1,145 @@
+/* Lexend Deca font   w-400*/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto&family=Young+Serif&display=swap');
+
+/* Big Shoulders Display font    w-700*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@1,500&family=Young+Serif&display=swap');
+
+
+:root {
+
+    /* Colors */
+
+/* primary colors */
+--Bright-orange: #e38826;
+--Dark-cyan: #006970;
+--Very-dark-cyan: #004241;
+
+/* paragraph color */
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+/* background, headings, buttons */
+--Very-light-gray: #f2f2f2;
+/* fonts */
+--Lexend-Deca: "Lexend Deca", sans-serif;
+--Big-Shoulders-Display: "Big Shoulders Display", sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {    
+    font-size: 15px;
+}
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--Very-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    margin: 4.5rem  0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    @media screen and (max-width:992px) {
+        flex-direction: column;        
+    }
+}
+.card {
+    width:300px;
+    height: 500px;
+    display: flex;
+    flex-shrink:0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 45px;
+    @media screen and (max-width:992px){
+        height: 440px;
+    }
+    
+    
+}
+.card .card-title {
+    text-transform: uppercase;
+    font-family: var(--Big-Shoulders-Display);
+    font-size: 2.7rem;
+    color: var(--Very-light-gray);
+}
+.card.sedan {
+    background-color: var(--Bright-orange);
+    
+}
+.card.suvs {
+    background-color: var(--Dark-cyan);
+    
+}
+.card.luxury {
+    background-color: var(--Very-dark-cyan);
+
+}
+.card .card-discriptipn {
+    color: var(--Very-light-gray);
+    font-family: var(--Lexend-Deca);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    @media screen and (max-width:992px){
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+}
+.card .btn {
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    background-color: var(--Very-light-gray);
+    cursor: pointer;
+    font-family: var(--Lexend-Deca);
+    font-size: 1rem;
+    font-weight: 400;
+    transition: .3s ease;
+}
+
+.card.sedan .btn {
+    color: var(--Bright-orange);
+}
+.card.suvs .btn {
+    color: var(--Dark-cyan);
+}
+.card.luxury .btn {
+    color: var(--Very-dark-cyan);
+}
+.card .btn:hover {
+    background: transparent;
+    border: 2px solid var(--Very-light-gray);
+    color: var(--Very-light-gray);
+}
+
+/* footer */
+.footer {
+    position: absolute;
+
+    width: 100%;
+    bottom: 30px;
+}
+.attribution {
+    color: var(--Very-dark-cyan);
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--Dark-cyan);
+}
